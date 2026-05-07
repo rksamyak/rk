@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>About Us | Leo Digital Communication</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* PAGE SPECIFIC STYLES */
+    .about-hero {
+      position:relative; z-index:1; padding:160px 24px 80px; text-align:center; max-width:820px; margin:0 auto;
+    }
+    .about-page-title {
+      font-size:clamp(38px,5vw,66px); font-weight:800; line-height:1.1; margin-bottom:20px; color:var(--text);
+    }
+    .about-page-sub {
+      font-size:18px; color:var(--muted); line-height:1.7; max-width:580px; margin:0 auto 48px;
+    }
+    .about-content-card {
+      max-width: 1000px; margin: 0 auto 100px; padding: 60px 48px;
+      background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border); border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05); text-align: center;
+    }
+    .about-content-card p {
+      font-size: 18px; line-height: 1.8; color: var(--muted); margin-bottom: 24px;
+    }
+    .about-content-card p:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Leo Digital Communication</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Company ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html" class="dropdown-link">About Us</a>
+            <a href="ourwork.html" class="dropdown-link">Our Work</a>
+            <a href="expertise.html" class="dropdown-link">Expertise</a>
+            <a href="insights.html" class="dropdown-link">Insights</a>
+            <a href="news-updates.html" class="dropdown-link">News & Updates</a>
+            <a href="career.html" class="dropdown-link">Careers</a>
+          </div>
+        </li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="results.html" class="nav-link">Results</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+      </ul>
+      <a href="contact.html" class="btn-nav" id="navCta">Get Started</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="about-hero">
+    <span class="section-tag">Who We Are</span>
+    <h1 class="about-page-title">Driven by <span class="gradient-text">Data</span>, Fueled by <span class="gradient-text">Passion</span></h1>
+    <p class="about-page-sub">We are a team of relentless digital marketers, strategists, and creatives dedicated to driving measurable growth for ambitious brands worldwide.</p>
+  </div>
+
+  <!-- Content Section -->
+  <div class="about-content-card reveal">
+    <h2 style="font-size: 32px; font-weight: 800; color: var(--text); margin-bottom: 24px;">Our Mission</h2>
+    <p>At Leo Digital Communication, our mission is simple: we want to democratize top-tier digital marketing for brands of all sizes. We believe that exceptional products deserve exceptional visibility.</p>
+    <p>Founded on the principles of transparency, data-backed decision-making, and continuous innovation, we have scaled over 500 brands across the globe. Our strategies are never copy-pasted; they are meticulously crafted to align with your unique market position and business objectives.</p>
+    <p>We are not just an agency; we are your strategic growth partner.</p>
+  </div>
+
+  <!-- Call to Action -->
+  <div style="max-width:1160px;margin:0 auto;padding:0 24px 100px;">
+    <div style="background:linear-gradient(135deg,rgba(124,58,237,0.18),rgba(37,99,235,0.12));backdrop-filter:blur(20px);border:1px solid rgba(168,85,247,0.3);border-radius:28px;padding:72px 48px;text-align:center;" class="reveal">
+      <h2 style="font-size:clamp(30px,4vw,48px);font-weight:800;color:var(--text);margin-bottom:16px;">Let's Write Your <span class="gradient-text">Success Story</span></h2>
+      <p style="font-size:17px;color:var(--muted);margin-bottom:36px;">Our experts are ready to audit your current digital footprint and map out a tailored growth strategy.</p>
+      <a href="contact.html" class="btn-primary">Connect With Us 🚀</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo"><span class="logo-icon">⚡</span><span class="logo-text">Leo Digital Communication</span></div>
+        <p class="footer-tagline">Growing brands with data-driven digital marketing. We turn strategy into measurable growth.</p>
+        <div class="footer-socials">
+          <a href="#" class="fsoc-btn">𝕏</a><a href="#" class="fsoc-btn">in</a><a href="#" class="fsoc-btn">📸</a><a href="#" class="fsoc-btn">▶</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="fl-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="ourwork.html">Our Work</a>
+          <a href="expertise.html">Expertise</a>
+          <a href="career.html">Careers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="fl-col">
+          <h4>Services</h4>
+          <a href="services.html">SEO</a>
+          <a href="services.html">Social Media</a>
+          <a href="services.html">PPC Ads</a>
+          <a href="services.html">Content</a>
+        </div>
+        <div class="fl-col">
+          <h4>Resources</h4>
+          <a href="insights.html">Insights & Blog</a>
+          <a href="news-updates.html">News & Updates</a>
+          <a href="results.html">Case Studies</a>
+          <a href="reviews.html">Client Reviews</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Leo Digital Communication. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+    // Mobile Menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

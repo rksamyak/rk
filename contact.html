@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Contact NexaGrow – Book a free strategy call and let our experts craft a digital marketing plan to grow your brand."/>
+  <title>Contact Us | NexaGrow Digital Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+
+    /* HERO */
+
+    .con-hero { position:relative;z-index:1;padding:160px 24px 70px;text-align:center;max-width:760px;margin:0 auto; }
+    .con-page-title { font-size:clamp(38px,5vw,64px);font-weight:800;line-height:1.1;margin-bottom:18px;color:#f1f5f9; }
+    .con-page-sub { font-size:17px;color:#94a3b8;line-height:1.7;max-width:540px;margin:0 auto 40px; }
+
+    /* MAIN WRAPPER */
+    .con-section { max-width:1160px;margin:0 auto;padding:0 24px 100px;display:grid;grid-template-columns:1fr 1.25fr;gap:60px;align-items:start; }
+
+    /* LEFT – INFO PANEL */
+    .con-info { display:flex;flex-direction:column;gap:0; }
+    .con-info-header { margin-bottom:36px; }
+    .con-info-title { font-size:30px;font-weight:800;color:#f1f5f9;line-height:1.2;margin-bottom:10px; }
+    .con-info-sub { font-size:15px;color:#94a3b8;line-height:1.7; }
+
+    .info-card {
+      background:rgba(255,255,255,0.04);
+      backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+      border:1px solid rgba(168,85,247,0.14);
+      border-radius:18px;padding:24px;margin-bottom:16px;
+      display:flex;align-items:center;gap:18px;
+      transition:border-color .3s,background .3s,transform .3s;
+    }
+    .info-card:hover { border-color:rgba(168,85,247,0.38);background:rgba(124,58,237,0.06);transform:translateX(6px); }
+    .info-icon { width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,rgba(124,58,237,0.3),rgba(37,99,235,0.2));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0; }
+    .info-text-title { font-size:13px;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px; }
+    .info-text-val { font-size:15px;color:#e2e8f0;font-weight:600; }
+
+    .social-row { display:flex;gap:10px;margin-top:8px; }
+    .soc-btn { width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(168,85,247,0.16);display:flex;align-items:center;justify-content:center;font-size:16px;color:#94a3b8;text-decoration:none;transition:all .3s; }
+    .soc-btn:hover { background:rgba(124,58,237,0.22);border-color:rgba(168,85,247,0.5);color:#c4b5fd;transform:translateY(-3px); }
+
+    .trust-strip { display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px; }
+    .trust-item { background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:16px;text-align:center; }
+    .trust-num { font-size:24px;font-weight:800;background:linear-gradient(135deg,#c4b5fd,#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent; }
+    .trust-lbl { font-size:11px;color:#64748b;margin-top:2px; }
+
+    /* RIGHT – FORM */
+    .con-form-card {
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
+      border:1px solid rgba(168,85,247,0.2);
+      border-radius:24px;padding:44px;
+      box-shadow:0 20px 60px rgba(0,0,0,0.35);
+    }
+    .form-title { font-size:22px;font-weight:800;color:#f1f5f9;margin-bottom:6px; }
+    .form-sub { font-size:14px;color:#64748b;margin-bottom:28px; }
+    .form-row2 { display:grid;grid-template-columns:1fr 1fr;gap:18px; }
+    .fg { display:flex;flex-direction:column;gap:7px;margin-bottom:18px; }
+    .fg label { font-size:13px;font-weight:600;color:#94a3b8; }
+    .fg input, .fg select, .fg textarea {
+      padding:13px 15px;border-radius:12px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(168,85,247,0.18);
+      color:#f1f5f9;font-family:var(--font);font-size:15px;
+      outline:none;transition:border-color .3s,box-shadow .3s;resize:vertical;
+    }
+    .fg input::placeholder,.fg textarea::placeholder { color:rgba(148,163,184,0.45); }
+    .fg input:focus,.fg select:focus,.fg textarea:focus { border-color:#a78bfa;box-shadow:0 0 0 3px rgba(167,139,250,0.15); }
+    .fg select option { background:#1e1b4b; }
+    .budget-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:8px; }
+    .budget-opt { padding:10px;border-radius:10px;border:1px solid rgba(168,85,247,0.18);background:rgba(255,255,255,0.04);color:#94a3b8;font-size:13px;font-weight:600;cursor:pointer;text-align:center;transition:all .3s;font-family:var(--font); }
+    .budget-opt:hover,.budget-opt.selected { background:rgba(124,58,237,0.2);border-color:rgba(168,85,247,0.5);color:#c4b5fd; }
+    .submit-btn { width:100%;padding:16px;border-radius:50px;border:none;cursor:pointer;background:linear-gradient(135deg,#7c3aed,#2563eb);color:#fff;font-size:16px;font-weight:700;font-family:var(--font);box-shadow:0 0 28px rgba(168,85,247,0.4);transition:transform .2s,box-shadow .3s;margin-top:8px; }
+    .submit-btn:hover { transform:translateY(-3px);box-shadow:0 0 44px rgba(168,85,247,0.6); }
+    .form-success { margin-top:16px;padding:14px;border-radius:12px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#34d399;font-size:15px;text-align:center; }
+
+    /* FAQ */
+    .faq-section { max-width:800px;margin:0 auto;padding:0 24px 100px; }
+    .faq-item { background:rgba(255,255,255,0.04);border:1px solid rgba(168,85,247,0.14);border-radius:16px;margin-bottom:12px;overflow:hidden;transition:border-color .3s; }
+    .faq-item.open { border-color:rgba(168,85,247,0.38); }
+    .faq-q { padding:22px 26px;font-size:16px;font-weight:700;color:#f1f5f9;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px; }
+    .faq-icon { font-size:20px;color:#a78bfa;transition:transform .3s;flex-shrink:0; }
+    .faq-item.open .faq-icon { transform:rotate(45deg); }
+    .faq-a { max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s; }
+    .faq-item.open .faq-a { max-height:300px;padding:0 26px 22px; }
+    .faq-a p { font-size:14px;color:#94a3b8;line-height:1.8; }
+
+    @media(max-width:960px) { .con-section { grid-template-columns:1fr;gap:40px; } }
+    @media(max-width:600px) { .form-row2 { grid-template-columns:1fr; } .budget-grid { grid-template-columns:repeat(2,1fr); } .con-form-card { padding:28px 20px; } .trust-strip { grid-template-columns:repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div><div class="orb orb-2"></div>
+    <div class="orb orb-3"></div><div class="orb orb-4"></div>
+  </div>
+
+  <!-- Glassmorphism Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Leo Digital Communication</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Company ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html" class="dropdown-link">About Us</a>
+            <a href="ourwork.html" class="dropdown-link">Our Work</a>
+            <a href="expertise.html" class="dropdown-link">Expertise</a>
+            <a href="insights.html" class="dropdown-link">Insights</a>
+            <a href="news-updates.html" class="dropdown-link">News & Updates</a>
+            <a href="career.html" class="dropdown-link">Careers</a>
+          </div>
+        </li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="results.html" class="nav-link">Results</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+      </ul>
+      <a href="contact.html" class="btn-nav" id="navCta">Get Started</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="con-hero">
+    <span class="section-tag">🚀 Free Strategy Call</span>
+    <h1 class="con-page-title">Let's <span class="gradient-text">Grow Together</span></h1>
+    <p class="con-page-sub">Tell us about your brand and goals. Our growth experts will respond within 24 hours with a tailored strategy.</p>
+  </div>
+
+  <!-- Main Section -->
+  <div class="con-section">
+
+    <!-- Left Info -->
+    <div class="con-info reveal">
+      <div class="con-info-header">
+        <div class="con-info-title">We'd Love to Hear From You</div>
+        <div class="con-info-sub">Whether you're just starting out or ready to scale, we'll build the right strategy for your goals.</div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <div>
+          <div class="info-text-title">Office</div>
+          <div class="info-text-val">123 Growth Avenue, San Francisco, CA 94105</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📞</div>
+        <div>
+          <div class="info-text-title">Phone</div>
+          <div class="info-text-val">+1 (800) 555-NEXA</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">✉️</div>
+        <div>
+          <div class="info-text-title">Email</div>
+          <div class="info-text-val">hello@nexagrow.io</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🕐</div>
+        <div>
+          <div class="info-text-title">Response Time</div>
+          <div class="info-text-val">Within 24 hours, guaranteed</div>
+        </div>
+      </div>
+
+      <div class="social-row">
+        <a href="#" class="soc-btn" aria-label="Twitter">𝕏</a>
+        <a href="#" class="soc-btn" aria-label="LinkedIn">in</a>
+        <a href="#" class="soc-btn" aria-label="Instagram">📸</a>
+        <a href="#" class="soc-btn" aria-label="YouTube">▶</a>
+      </div>
+
+      <div class="trust-strip" style="margin-top:28px;">
+        <div class="trust-item"><div class="trust-num">500+</div><div class="trust-lbl">Brands Scaled</div></div>
+        <div class="trust-item"><div class="trust-num">98%</div><div class="trust-lbl">Retention Rate</div></div>
+        <div class="trust-item"><div class="trust-num">12x</div><div class="trust-lbl">Avg. ROI</div></div>
+      </div>
+    </div>
+
+    <!-- Right Form -->
+    <div class="con-form-card reveal">
+      <div class="form-title">Send Us a Message</div>
+      <div class="form-sub">Fill in the details below and we'll get back to you within 24 hours.</div>
+      <form id="contactForm" novalidate>
+        <div class="form-row2">
+          <div class="fg">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="John Doe" required/>
+          </div>
+          <div class="fg">
+            <label for="emailAddr">Email Address</label>
+            <input type="email" id="emailAddr" name="emailAddr" placeholder="john@company.com" required/>
+          </div>
+        </div>
+        <div class="form-row2">
+          <div class="fg">
+            <label for="companyName">Company / Brand</label>
+            <input type="text" id="companyName" name="companyName" placeholder="Your Company"/>
+          </div>
+          <div class="fg">
+            <label for="phoneNum">Phone (Optional)</label>
+            <input type="tel" id="phoneNum" name="phoneNum" placeholder="+1 (555) 000-0000"/>
+          </div>
+        </div>
+        <div class="fg">
+          <label for="serviceSelect">Service Interested In</label>
+          <select id="serviceSelect" name="serviceSelect">
+            <option value="">Choose a service…</option>
+            <option>SEO Optimization</option>
+            <option>Social Media Marketing</option>
+            <option>PPC Advertising</option>
+            <option>Content Marketing</option>
+            <option>Analytics & Insights</option>
+            <option>Email Automation</option>
+            <option>Full-Service Package</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Monthly Budget</label>
+          <div class="budget-grid" id="budgetGrid">
+            <button type="button" class="budget-opt" data-val="&lt;$2K">&lt; $2K/mo</button>
+            <button type="button" class="budget-opt" data-val="$2K-$5K">$2K – $5K</button>
+            <button type="button" class="budget-opt" data-val="$5K-$10K">$5K – $10K</button>
+            <button type="button" class="budget-opt" data-val="$10K-$25K">$10K – $25K</button>
+            <button type="button" class="budget-opt" data-val="$25K+">$25K+</button>
+            <button type="button" class="budget-opt" data-val="Custom">Custom</button>
+          </div>
+        </div>
+        <div class="fg">
+          <label for="msgArea">Tell Us About Your Goals</label>
+          <textarea id="msgArea" name="msgArea" rows="4" placeholder="Share your goals, challenges, and what success looks like for you…"></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submitBtn">Send My Request 🚀</button>
+        <div class="form-success hidden" id="formSuccess">✅ Thank you! We'll be in touch within 24 hours.</div>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="section-header reveal" style="max-width:800px;margin:0 auto;padding:0 24px 40px;">
+    <span class="section-tag">FAQ</span>
+    <h2 class="section-title" style="color:#f1f5f9;">Common <span class="gradient-text">Questions</span></h2>
+  </div>
+  <div class="faq-section">
+    <div class="faq-item reveal">
+      <div class="faq-q">How quickly will I see results? <span class="faq-icon">+</span></div>
+      <div class="faq-a"><p>Most clients see measurable improvements within the first 60–90 days, with significant growth by month 4–6. SEO typically takes longer (3–6 months), while PPC and social media deliver faster initial wins.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">Do you work with small businesses? <span class="faq-icon">+</span></div>
+      <div class="faq-a"><p>Absolutely. We work with businesses of all sizes — from early-stage startups to Fortune 500 enterprises. We tailor our strategies and budgets to match your specific stage and goals.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">What makes NexaGrow different from other agencies? <span class="faq-icon">+</span></div>
+      <div class="faq-a"><p>We're obsessively data-driven, fully transparent, and treat your goals as our own. Every strategy is custom-built — no cookie-cutter templates. Plus, we offer a 90-day ROI guarantee on all campaigns.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">Is there a minimum contract length? <span class="faq-icon">+</span></div>
+      <div class="faq-a"><p>We recommend a minimum of 3 months to see meaningful results, but we don't lock you into long contracts. We earn your business month-to-month through performance.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">What reporting do you provide? <span class="faq-icon">+</span></div>
+      <div class="faq-a"><p>You'll receive a live dashboard with real-time KPIs, plus detailed monthly performance reports covering traffic, leads, conversions, ROI, and strategic recommendations for the next month.</p></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo"><span class="logo-icon">⚡</span><span class="logo-text">NexaGrow</span></div>
+        <p class="footer-tagline">Growing brands with data-driven digital marketing since 2015.</p>
+        <div class="footer-socials">
+          <a href="#" class="fsoc-btn" aria-label="Twitter">𝕏</a>
+          <a href="#" class="fsoc-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="fsoc-btn" aria-label="Instagram">📸</a>
+          <a href="#" class="fsoc-btn" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="fl-col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="results.html">Results</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="fl-col">
+          <h4>Services</h4>
+          <a href="services.html">SEO</a>
+          <a href="services.html">Social Media</a>
+          <a href="services.html">PPC Ads</a>
+          <a href="services.html">Content</a>
+        </div>
+        <div class="fl-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Stay Updated</h4>
+        <p>Get growth tips & insights straight to your inbox.</p>
+        <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
+          <input type="email" id="nlEmail" placeholder="Your email address"/>
+          <button type="submit" class="btn-newsletter">Subscribe</button>
+        </form>
+        <div class="newsletter-success hidden" id="nlSuccess">✅ You're subscribed!</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 NexaGrow. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    // Budget selector
+    document.querySelectorAll('.budget-opt').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.budget-opt').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    });
+    // Contact form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').classList.remove('hidden');
+      this.reset();
+      document.querySelectorAll('.budget-opt').forEach(b => b.classList.remove('selected'));
+    });
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-q').addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    // Newsletter
+    function handleNewsletter(e) {
+      e.preventDefault();
+      document.getElementById('nlSuccess').classList.remove('hidden');
+      document.getElementById('newsletterForm').reset();
+    }
+    // Orb parallax
+    window.addEventListener('mousemove', e => {
+      const x = (e.clientX/window.innerWidth-0.5)*20;
+      const y = (e.clientY/window.innerHeight-0.5)*20;
+      document.querySelectorAll('.orb').forEach((orb,i) => {
+        orb.style.transform = `translate(${x*(i+1)*.4}px,${y*(i+1)*.4}px)`;
+      });
+    });
+  </script>
+</body>
+</html>
