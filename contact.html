@@ -13,8 +13,8 @@
     /* HERO */
 
     .con-hero { position:relative;z-index:1;padding:160px 24px 70px;text-align:center;max-width:760px;margin:0 auto; }
-    .con-page-title { font-size:clamp(38px,5vw,64px);font-weight:800;line-height:1.1;margin-bottom:18px;color:#f1f5f9; }
-    .con-page-sub { font-size:17px;color:#94a3b8;line-height:1.7;max-width:540px;margin:0 auto 40px; }
+    .con-page-title { font-size:clamp(38px,5vw,64px);font-weight:800;line-height:1.1;margin-bottom:18px;color:var(--text); }
+    .con-page-sub { font-size:17px;color:var(--muted);line-height:1.7;max-width:540px;margin:0 auto 40px; }
 
     /* MAIN WRAPPER */
     .con-section { max-width:1160px;margin:0 auto;padding:0 24px 100px;display:grid;grid-template-columns:1fr 1.25fr;gap:60px;align-items:start; }
@@ -22,71 +22,71 @@
     /* LEFT – INFO PANEL */
     .con-info { display:flex;flex-direction:column;gap:0; }
     .con-info-header { margin-bottom:36px; }
-    .con-info-title { font-size:30px;font-weight:800;color:#f1f5f9;line-height:1.2;margin-bottom:10px; }
-    .con-info-sub { font-size:15px;color:#94a3b8;line-height:1.7; }
+    .con-info-title { font-size:30px;font-weight:800;color:var(--text);line-height:1.2;margin-bottom:10px; }
+    .con-info-sub { font-size:15px;color:var(--muted);line-height:1.7; }
 
     .info-card {
-      background:rgba(255,255,255,0.04);
+      background:var(--glass-bg);
       backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-      border:1px solid rgba(168,85,247,0.14);
+      border:1px solid var(--glass-border);
       border-radius:18px;padding:24px;margin-bottom:16px;
       display:flex;align-items:center;gap:18px;
       transition:border-color .3s,background .3s,transform .3s;
     }
     .info-card:hover { border-color:rgba(168,85,247,0.38);background:rgba(124,58,237,0.06);transform:translateX(6px); }
     .info-icon { width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,rgba(124,58,237,0.3),rgba(37,99,235,0.2));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0; }
-    .info-text-title { font-size:13px;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px; }
+    .info-text-title { font-size:13px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px; }
     .info-text-val { font-size:15px;color:#e2e8f0;font-weight:600; }
 
     .social-row { display:flex;gap:10px;margin-top:8px; }
-    .soc-btn { width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(168,85,247,0.16);display:flex;align-items:center;justify-content:center;font-size:16px;color:#94a3b8;text-decoration:none;transition:all .3s; }
-    .soc-btn:hover { background:rgba(124,58,237,0.22);border-color:rgba(168,85,247,0.5);color:#c4b5fd;transform:translateY(-3px); }
+    .soc-btn { width:42px;height:42px;border-radius:12px;background:var(--glass-bg);border:1px solid rgba(168,85,247,0.16);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--muted);text-decoration:none;transition:all .3s; }
+    .soc-btn:hover { background:rgba(124,58,237,0.22);border-color:var(--purple);color:#c4b5fd;transform:translateY(-3px); }
 
     .trust-strip { display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px; }
-    .trust-item { background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:16px;text-align:center; }
+    .trust-item { background:var(--glass-bg);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:16px;text-align:center; }
     .trust-num { font-size:24px;font-weight:800;background:linear-gradient(135deg,#c4b5fd,#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent; }
-    .trust-lbl { font-size:11px;color:#64748b;margin-top:2px; }
+    .trust-lbl { font-size:11px;color:var(--muted);margin-top:2px; }
 
     /* RIGHT – FORM */
     .con-form-card {
-      background:rgba(255,255,255,0.05);
+      background:var(--glass-bg);
       backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
       border:1px solid rgba(168,85,247,0.2);
       border-radius:24px;padding:44px;
       box-shadow:0 20px 60px rgba(0,0,0,0.35);
     }
-    .form-title { font-size:22px;font-weight:800;color:#f1f5f9;margin-bottom:6px; }
-    .form-sub { font-size:14px;color:#64748b;margin-bottom:28px; }
+    .form-title { font-size:22px;font-weight:800;color:var(--text);margin-bottom:6px; }
+    .form-sub { font-size:14px;color:var(--muted);margin-bottom:28px; }
     .form-row2 { display:grid;grid-template-columns:1fr 1fr;gap:18px; }
     .fg { display:flex;flex-direction:column;gap:7px;margin-bottom:18px; }
-    .fg label { font-size:13px;font-weight:600;color:#94a3b8; }
+    .fg label { font-size:13px;font-weight:600;color:var(--muted); }
     .fg input, .fg select, .fg textarea {
       padding:13px 15px;border-radius:12px;
-      background:rgba(255,255,255,0.05);
+      background:var(--glass-bg);
       border:1px solid rgba(168,85,247,0.18);
-      color:#f1f5f9;font-family:var(--font);font-size:15px;
+      color:var(--text);font-family:var(--font);font-size:15px;
       outline:none;transition:border-color .3s,box-shadow .3s;resize:vertical;
     }
     .fg input::placeholder,.fg textarea::placeholder { color:rgba(148,163,184,0.45); }
     .fg input:focus,.fg select:focus,.fg textarea:focus { border-color:#a78bfa;box-shadow:0 0 0 3px rgba(167,139,250,0.15); }
     .fg select option { background:#1e1b4b; }
     .budget-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:8px; }
-    .budget-opt { padding:10px;border-radius:10px;border:1px solid rgba(168,85,247,0.18);background:rgba(255,255,255,0.04);color:#94a3b8;font-size:13px;font-weight:600;cursor:pointer;text-align:center;transition:all .3s;font-family:var(--font); }
-    .budget-opt:hover,.budget-opt.selected { background:rgba(124,58,237,0.2);border-color:rgba(168,85,247,0.5);color:#c4b5fd; }
+    .budget-opt { padding:10px;border-radius:10px;border:1px solid rgba(168,85,247,0.18);background:var(--glass-bg);color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;text-align:center;transition:all .3s;font-family:var(--font); }
+    .budget-opt:hover,.budget-opt.selected { background:rgba(124,58,237,0.2);border-color:var(--purple);color:#c4b5fd; }
     .submit-btn { width:100%;padding:16px;border-radius:50px;border:none;cursor:pointer;background:linear-gradient(135deg,#7c3aed,#2563eb);color:#fff;font-size:16px;font-weight:700;font-family:var(--font);box-shadow:0 0 28px rgba(168,85,247,0.4);transition:transform .2s,box-shadow .3s;margin-top:8px; }
     .submit-btn:hover { transform:translateY(-3px);box-shadow:0 0 44px rgba(168,85,247,0.6); }
     .form-success { margin-top:16px;padding:14px;border-radius:12px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#34d399;font-size:15px;text-align:center; }
 
     /* FAQ */
     .faq-section { max-width:800px;margin:0 auto;padding:0 24px 100px; }
-    .faq-item { background:rgba(255,255,255,0.04);border:1px solid rgba(168,85,247,0.14);border-radius:16px;margin-bottom:12px;overflow:hidden;transition:border-color .3s; }
+    .faq-item { background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:16px;margin-bottom:12px;overflow:hidden;transition:border-color .3s; }
     .faq-item.open { border-color:rgba(168,85,247,0.38); }
-    .faq-q { padding:22px 26px;font-size:16px;font-weight:700;color:#f1f5f9;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px; }
+    .faq-q { padding:22px 26px;font-size:16px;font-weight:700;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px; }
     .faq-icon { font-size:20px;color:#a78bfa;transition:transform .3s;flex-shrink:0; }
     .faq-item.open .faq-icon { transform:rotate(45deg); }
     .faq-a { max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s; }
     .faq-item.open .faq-a { max-height:300px;padding:0 26px 22px; }
-    .faq-a p { font-size:14px;color:#94a3b8;line-height:1.8; }
+    .faq-a p { font-size:14px;color:var(--muted);line-height:1.8; }
 
     @media(max-width:960px) { .con-section { grid-template-columns:1fr;gap:40px; } }
     @media(max-width:600px) { .form-row2 { grid-template-columns:1fr; } .budget-grid { grid-template-columns:repeat(2,1fr); } .con-form-card { padding:28px 20px; } .trust-strip { grid-template-columns:repeat(2,1fr); } }
@@ -103,9 +103,11 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <span class="logo-icon">⚡</span>
-        <span class="logo-text">Leo Digital Marketing</span>
-      </a>
+        <div class="logo-circle">
+            <span class="logo-text-inner">Leo</span>
+        </div>
+        <span class="logo-text-outer">digital</span>
+    </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item">
@@ -253,7 +255,7 @@
   <!-- FAQ Section -->
   <div class="section-header reveal" style="max-width:800px;margin:0 auto;padding:0 24px 40px;">
     <span class="section-tag">FAQ</span>
-    <h2 class="section-title" style="color:#f1f5f9;">Common <span class="gradient-text">Questions</span></h2>
+    <h2 class="section-title" style="color:var(--text);">Common <span class="gradient-text">Questions</span></h2>
   </div>
   <div class="faq-section">
     <div class="faq-item reveal">
@@ -282,7 +284,12 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo"><span class="logo-icon">⚡</span><span class="logo-text">Leo Digital Marketing</span></div>
+        <div class="footer-logo">
+        <div class="logo-circle">
+            <span class="logo-text-inner">Leo</span>
+        </div>
+        <span class="logo-text-outer">digital</span>
+    </div>
         <p class="footer-tagline">Growing brands with data-driven digital marketing since 2015.</p>
         <div class="footer-socials">
           <a href="#" class="fsoc-btn" aria-label="Twitter">𝕏</a>

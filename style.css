@@ -112,17 +112,18 @@ body {
   right: 0;
   z-index: 999;
   padding: 14px 0;
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  transition: all 0.4s;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.70);
-  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   padding: 10px 0;
 }
 
@@ -138,13 +139,53 @@ body {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
   text-decoration: none;
+  transition: transform 0.3s ease;
   margin-right: auto;
 }
 
-.logo-icon {
+.nav-logo:hover {
+  transform: scale(1.02);
+}
+
+.logo-circle {
+  background-color: #000;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4px;
+}
+
+.logo-text-inner {
+  color: #fff;
+  font-family: 'Georgia', serif;
+  font-weight: 900;
+  font-style: italic;
   font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.logo-text-outer {
+  color: #000;
+  font-family: 'Georgia', serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 26px;
+  letter-spacing: -0.5px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.logo-icon {
+  font-size: 26px;
 }
 
 .logo-text {
@@ -1037,14 +1078,7 @@ section {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
-}
 
-.footer-tagline {
   color: #94a3b8;
   font-size: 14px;
   line-height: 1.8;

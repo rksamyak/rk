@@ -13,34 +13,34 @@
     /* HERO */
 
     .rev-hero { position:relative;z-index:1;padding:160px 24px 80px;text-align:center;max-width:760px;margin:0 auto; }
-    .rev-page-title { font-size:clamp(38px,5vw,64px);font-weight:800;line-height:1.1;margin-bottom:18px;color:#f1f5f9; }
-    .rev-page-sub { font-size:17px;color:#94a3b8;line-height:1.7;max-width:540px;margin:0 auto 40px; }
+    .rev-page-title { font-size:clamp(38px,5vw,64px);font-weight:800;line-height:1.1;margin-bottom:18px;color:var(--text); }
+    .rev-page-sub { font-size:17px;color:var(--muted);line-height:1.7;max-width:540px;margin:0 auto 40px; }
 
     /* RATING SUMMARY */
     .rating-summary { max-width:900px;margin:0 auto 80px;padding:0 24px;display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center; }
     .rating-big { text-align:center; }
     .rating-num { font-size:88px;font-weight:800;background:linear-gradient(135deg,#c4b5fd,#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1; }
     .rating-stars { font-size:28px;color:#f59e0b;letter-spacing:4px;margin:8px 0; }
-    .rating-count { font-size:14px;color:#64748b; }
+    .rating-count { font-size:14px;color:var(--muted); }
     .rating-bars { display:flex;flex-direction:column;gap:12px; }
     .rbar-row { display:flex;align-items:center;gap:12px; }
-    .rbar-label { font-size:13px;color:#94a3b8;width:30px;text-align:right; }
-    .rbar-track { flex:1;height:8px;background:rgba(255,255,255,0.07);border-radius:8px;overflow:hidden; }
+    .rbar-label { font-size:13px;color:var(--muted);width:30px;text-align:right; }
+    .rbar-track { flex:1;height:8px;background:var(--glass-bg);border-radius:8px;overflow:hidden; }
     .rbar-fill { height:100%;border-radius:8px;background:linear-gradient(90deg,#7c3aed,#67e8f9);transition:width 1.5s cubic-bezier(.22,1,.36,1); }
-    .rbar-pct { font-size:13px;color:#64748b;width:36px; }
+    .rbar-pct { font-size:13px;color:var(--muted);width:36px; }
 
     /* FILTER TABS */
     .filter-tabs { display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:52px; }
-    .ftab { padding:8px 22px;border-radius:50px;border:1px solid rgba(168,85,247,0.2);background:rgba(255,255,255,0.04);color:#94a3b8;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.3s;font-family:var(--font); }
-    .ftab.active,.ftab:hover { background:rgba(124,58,237,0.2);border-color:rgba(168,85,247,0.5);color:#c4b5fd; }
+    .ftab { padding:8px 22px;border-radius:50px;border:1px solid rgba(168,85,247,0.2);background:var(--glass-bg);color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.3s;font-family:var(--font); }
+    .ftab.active,.ftab:hover { background:rgba(124,58,237,0.2);border-color:var(--purple);color:#c4b5fd; }
 
     /* REVIEWS GRID */
     .reviews-section { max-width:1160px;margin:0 auto;padding:0 24px 80px; }
     .reviews-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:24px; }
     .rev-card {
-      background:rgba(255,255,255,0.04);
+      background:var(--glass-bg);
       backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
-      border:1px solid rgba(168,85,247,0.14);
+      border:1px solid var(--glass-border);
       border-radius:22px;padding:32px;
       transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s;
       display:flex;flex-direction:column;gap:16px;
@@ -54,25 +54,25 @@
     .ts-ppc{background:rgba(37,99,235,.15);color:#93c5fd;border:1px solid rgba(37,99,235,.25);}
     .ts-content{background:rgba(245,158,11,.15);color:#fcd34d;border:1px solid rgba(245,158,11,.25);}
     .ts-email{background:rgba(236,72,153,.15);color:#f9a8d4;border:1px solid rgba(236,72,153,.25);}
-    .rev-quote { font-size:15px;color:#cbd5e1;line-height:1.8;font-style:italic;flex:1; }
-    .rev-author { display:flex;align-items:center;gap:14px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06); }
+    .rev-quote { font-size:15px;color:var(--muted);line-height:1.8;font-style:italic;flex:1; }
+    .rev-author { display:flex;align-items:center;gap:14px;padding-top:16px;border-top:1px solid var(--glass-border); }
     .rev-avatar { width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0; }
-    .rev-name { font-size:15px;font-weight:700;color:#f1f5f9;display:block; }
-    .rev-role { font-size:12px;color:#64748b; }
+    .rev-name { font-size:15px;font-weight:700;color:var(--text);display:block; }
+    .rev-role { font-size:12px;color:var(--muted); }
     .rev-result { font-size:13px;color:#34d399;font-weight:600;margin-top:4px;display:block; }
 
     /* LOGOS STRIP */
     .logos-section { max-width:1000px;margin:0 auto;padding:0 24px 80px;text-align:center; }
-    .logos-label { font-size:13px;color:#475569;text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-bottom:32px; }
+    .logos-label { font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-bottom:32px; }
     .logos-strip { display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap; }
-    .logo-pill { padding:14px 28px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;font-size:15px;font-weight:700;color:#475569;letter-spacing:.5px;transition:all 0.3s; }
+    .logo-pill { padding:14px 28px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px;font-size:15px;font-weight:700;color:var(--muted);letter-spacing:.5px;transition:all 0.3s; }
     .logo-pill:hover { background:rgba(124,58,237,0.1);border-color:rgba(168,85,247,0.3);color:#a78bfa; }
 
     /* CTA */
     .cta-band { max-width:1100px;margin:0 auto;padding:0 24px 100px; }
     .cta-inner { background:linear-gradient(135deg,rgba(124,58,237,0.18),rgba(37,99,235,0.12));backdrop-filter:blur(20px);border:1px solid rgba(168,85,247,0.3);border-radius:28px;padding:72px 48px;text-align:center; }
-    .cta-inner h2 { font-size:clamp(28px,4vw,46px);font-weight:800;color:#f1f5f9;margin-bottom:16px; }
-    .cta-inner p { font-size:17px;color:#94a3b8;margin:0 auto 36px;max-width:480px; }
+    .cta-inner h2 { font-size:clamp(28px,4vw,46px);font-weight:800;color:var(--text);margin-bottom:16px; }
+    .cta-inner p { font-size:17px;color:var(--muted);margin:0 auto 36px;max-width:480px; }
     .cta-btns { display:flex;gap:16px;justify-content:center;flex-wrap:wrap; }
     .btn-cta { padding:16px 36px;border-radius:50px;background:linear-gradient(135deg,#7c3aed,#2563eb);color:#fff;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 0 32px rgba(168,85,247,0.4);transition:transform .2s,box-shadow .3s; }
     .btn-cta:hover { transform:translateY(-3px);box-shadow:0 0 50px rgba(168,85,247,0.6); }
@@ -94,9 +94,11 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <span class="logo-icon">⚡</span>
-        <span class="logo-text">Leo Digital Marketing</span>
-      </a>
+        <div class="logo-circle">
+            <span class="logo-text-inner">Leo</span>
+        </div>
+        <span class="logo-text-outer">digital</span>
+    </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item">
@@ -308,7 +310,12 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo"><span class="logo-icon">⚡</span><span class="logo-text">Leo Digital Marketing</span></div>
+        <div class="footer-logo">
+        <div class="logo-circle">
+            <span class="logo-text-inner">Leo</span>
+        </div>
+        <span class="logo-text-outer">digital</span>
+    </div>
         <p class="footer-tagline">Growing brands with data-driven digital marketing since 2015.</p>
         <div class="footer-socials">
           <a href="#" class="fsoc-btn" aria-label="Twitter">𝕏</a>
