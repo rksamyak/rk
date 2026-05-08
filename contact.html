@@ -44,7 +44,7 @@
 
     .trust-strip { display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px; }
     .trust-item { background:var(--glass-bg);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:16px;text-align:center; }
-    .trust-num { font-size:24px;font-weight:800;background:linear-gradient(135deg,#c4b5fd,#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent; }
+    .trust-num { font-size:24px;font-weight:800;background:linear-gradient(135deg,#c4b5fd,#67e8f9);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent; }
     .trust-lbl { font-size:11px;color:var(--muted);margin-top:2px; }
 
     /* RIGHT – FORM */
@@ -93,6 +93,19 @@
   </style>
 </head>
 <body>
+  <!-- Global Loader -->
+  <div class="global-loader" id="globalLoader">
+    <div class="loader-spinner"></div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('globalLoader');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+      }
+    });
+  </script>
 
   <div class="bg-orbs">
     <div class="orb orb-1"></div><div class="orb orb-2"></div>

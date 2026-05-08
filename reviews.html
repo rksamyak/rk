@@ -19,7 +19,7 @@
     /* RATING SUMMARY */
     .rating-summary { max-width:900px;margin:0 auto 80px;padding:0 24px;display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center; }
     .rating-big { text-align:center; }
-    .rating-num { font-size:88px;font-weight:800;background:linear-gradient(135deg,#c4b5fd,#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1; }
+    .rating-num { font-size:88px;font-weight:800;background:linear-gradient(135deg,#c4b5fd,#67e8f9);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1; }
     .rating-stars { font-size:28px;color:#f59e0b;letter-spacing:4px;margin:8px 0; }
     .rating-count { font-size:14px;color:var(--muted); }
     .rating-bars { display:flex;flex-direction:column;gap:12px; }
@@ -84,6 +84,19 @@
   </style>
 </head>
 <body>
+  <!-- Global Loader -->
+  <div class="global-loader" id="globalLoader">
+    <div class="loader-spinner"></div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('globalLoader');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+      }
+    });
+  </script>
 
   <div class="bg-orbs">
     <div class="orb orb-1"></div><div class="orb orb-2"></div>

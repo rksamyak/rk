@@ -16,6 +16,19 @@
 </head>
 
 <body>
+  <!-- Global Loader -->
+  <div class="global-loader" id="globalLoader">
+    <div class="loader-spinner"></div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('globalLoader');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+      }
+    });
+  </script>
 
     <!-- Animated Background Orbs -->
     <div class="bg-orbs">
@@ -51,7 +64,7 @@
                 <li><a href="results.html" class="nav-link">Results</a></li>
                 <li><a href="reviews.html" class="nav-link">Reviews</a></li>
             </ul>
-            <a href="contact.html" class="btn-nav" id="navCta">Get Started</a>
+            <a href="contact.html" class="btn-nav hover-pulse" id="navCta">Get Started</a>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -61,7 +74,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <div class="badge" id="heroBadge">🚀 #1 Ranked Agency 2024</div>
+            <div class="badge" id="heroBadge">🚀 #1 Ranked company 2026</div>
             <h1 class="hero-title" id="heroTitle">
                 We Grow Your<br />
                 <span class="gradient-text" id="typingText"></span>
@@ -71,8 +84,8 @@
                 results that turn clicks into loyal customers.
             </p>
             <div class="hero-actions" id="heroActions">
-                <a href="#contact" class="btn-primary" id="heroPrimaryBtn">Start Growing Today</a>
-                <a href="#services" class="btn-ghost" id="heroGhostBtn">
+                <a href="#contact" class="btn-primary hover-pulse" id="heroPrimaryBtn">Start Growing Today</a>
+                <a href="#services" class="btn-ghost hover-pulse" id="heroGhostBtn">
                     <span class="play-icon">▶</span> See Our Work
                 </a>
             </div>

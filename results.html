@@ -24,7 +24,7 @@
     .res-stat-item { flex:1; min-width:160px; padding:36px 28px; text-align:center; border-right:1px solid rgba(168,85,247,0.12); position:relative; transition:background 0.3s; }
     .res-stat-item:last-child { border-right:none; }
     .res-stat-item:hover { background:rgba(168,85,247,0.06); }
-    .res-stat-num { font-size:48px; font-weight:800; background:linear-gradient(135deg,#c4b5fd,#67e8f9); -webkit-background-clip:text; -webkit-text-fill-color:transparent; display:block; }
+    .res-stat-num { font-size:48px; font-weight:800; background:linear-gradient(135deg,#c4b5fd,#67e8f9); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; display:block; }
     .res-stat-suf { font-size:30px; font-weight:700; color:#a78bfa; }
     .res-stat-label { font-size:14px; color:var(--muted); margin-top:4px; display:block; }
 
@@ -73,7 +73,7 @@
     .ind-card:hover { transform:translateY(-6px); border-color:rgba(168,85,247,0.38); box-shadow:0 20px 50px rgba(124,58,237,0.15); }
     .ind-icon { font-size:38px; margin-bottom:14px; display:block; }
     .ind-title { font-size:16px; font-weight:700; color:var(--text); margin-bottom:6px; }
-    .ind-count { font-size:28px; font-weight:800; background:linear-gradient(135deg,#c4b5fd,#67e8f9); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .ind-count { font-size:28px; font-weight:800; background:linear-gradient(135deg,#c4b5fd,#67e8f9); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
     .ind-label { font-size:12px; color:var(--muted); }
 
     /* CTA BAND */
@@ -98,6 +98,19 @@
   </style>
 </head>
 <body>
+  <!-- Global Loader -->
+  <div class="global-loader" id="globalLoader">
+    <div class="loader-spinner"></div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('globalLoader');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+      }
+    });
+  </script>
 
   <!-- Animated Background Orbs -->
   <div class="bg-orbs">

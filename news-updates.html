@@ -45,6 +45,19 @@
   </style>
 </head>
 <body>
+  <!-- Global Loader -->
+  <div class="global-loader" id="globalLoader">
+    <div class="loader-spinner"></div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('globalLoader');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+      }
+    });
+  </script>
   
   <nav class="navbar" id="navbar">
     <div class="nav-container">
